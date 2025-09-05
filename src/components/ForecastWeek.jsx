@@ -13,7 +13,7 @@ const weekday = (dt, tz) =>
     new Date((dt + tz) * 1000).toLocaleDateString("en-GB", { weekday: "long" });
 
 export default function ForecastWeek({ list, timezone = 0 }) {
-    // Group 3h records by day; compute min/max; pick icon near noon
+
     const map = {};
     list.forEach((it) => {
         const key = dayKey(it.dt, timezone);
